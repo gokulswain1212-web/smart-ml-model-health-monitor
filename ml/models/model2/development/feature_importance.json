@@ -1,0 +1,250 @@
+{
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "model_version": "model2-development-random-forest-seed-42",
+  "feature_names": [
+    "dataset_drift_score",
+    "max_feature_drift_score",
+    "number_drifted_features",
+    "missing_value_percentage",
+    "invalid_value_percentage",
+    "data_quality_score",
+    "duplicate_rate",
+    "prediction_positive_rate",
+    "prediction_positive_rate_change",
+    "prediction_mean_probability",
+    "historical_accuracy",
+    "historical_precision",
+    "historical_recall",
+    "historical_f1_score",
+    "previous_f1_trend",
+    "historical_metrics_available",
+    "historical_performance_observations"
+  ],
+  "importance_sum": 1.0000000000000002,
+  "generation_timestamp": "2026-11-06T09:58:23.465714+00:00",
+  "importance_method": "Random Forest mean decrease in impurity",
+  "causality_warning": "Feature importance describes model reliance in this synthetic development experiment. It does not show that a feature causes performance degradation.",
+  "features": [
+    {
+      "feature": "historical_f1_score",
+      "importance": 0.11026953622915675,
+      "rank": 1,
+      "measures": "Latest genuine F1 score available before the monitoring observation.",
+      "model_rationale": "F1 summarizes recent precision and recall and was directly used in the synthetic target-generation process.",
+      "risk_relation": "Its prominence may reflect the synthetic label rule and must not be interpreted as measured production behavior."
+    },
+    {
+      "feature": "dataset_drift_score",
+      "importance": 0.10719165109511904,
+      "rank": 2,
+      "measures": "Aggregate distribution drift between reference and current input data.",
+      "model_rationale": "A broad shift in input distributions may signal that the model is operating on less familiar data.",
+      "risk_relation": "Synthetic labels were more likely as this score increased; this is a learned association in the development fixture."
+    },
+    {
+      "feature": "previous_f1_trend",
+      "importance": 0.08187401393202581,
+      "rank": 3,
+      "measures": "Recent trend in genuine F1 values known as of the observation.",
+      "model_rationale": "A declining historical trend can provide an early warning signal.",
+      "risk_relation": "The synthetic target rule explicitly used negative trend, so its importance partly reflects the constructed experiment."
+    },
+    {
+      "feature": "prediction_positive_rate_change",
+      "importance": 0.06702419594966406,
+      "rank": 4,
+      "measures": "Change in positive prediction rate relative to the preceding batch.",
+      "model_rationale": "A sudden change in prediction mix can highlight behavior changes worth investigating.",
+      "risk_relation": "This feature's importance represents predictive association in this trained synthetic model only."
+    },
+    {
+      "feature": "prediction_mean_probability",
+      "importance": 0.06643320519288226,
+      "rank": 5,
+      "measures": "Mean predicted probability across records in a batch.",
+      "model_rationale": "A shift in confidence distribution can accompany changes in inputs or predictions.",
+      "risk_relation": "It does not measure calibration or correctness by itself."
+    },
+    {
+      "feature": "data_quality_score",
+      "importance": 0.06576395336365086,
+      "rank": 6,
+      "measures": "A bounded score derived from missing and invalid value percentages.",
+      "model_rationale": "It summarizes data-quality signals in a single feature.",
+      "risk_relation": "Its importance may overlap with missingness and invalid-value features and should not be read as an independent effect."
+    },
+    {
+      "feature": "duplicate_rate",
+      "importance": 0.06084377616252834,
+      "rank": 7,
+      "measures": "Fraction of duplicate records in the monitored batch.",
+      "model_rationale": "Duplicate records can alter the effective input population and batch summaries.",
+      "risk_relation": "Any relationship shown here is specific to the synthetic development data."
+    },
+    {
+      "feature": "prediction_positive_rate",
+      "importance": 0.060801844914765084,
+      "rank": 8,
+      "measures": "Fraction of Model 1 predictions assigned to the positive class.",
+      "model_rationale": "A changed prediction mix can reflect changes in inputs or model behavior.",
+      "risk_relation": "It is a monitoring signal, not proof that the model's true performance has degraded."
+    },
+    {
+      "feature": "missing_value_percentage",
+      "importance": 0.05822953986652584,
+      "rank": 9,
+      "measures": "Percentage of monitored feature values that are missing.",
+      "model_rationale": "Missingness can affect the inputs and preprocessing behavior seen by Model 1.",
+      "risk_relation": "The synthetic label rule made higher missingness a risk signal; this is a designed association, not causation."
+    },
+    {
+      "feature": "invalid_value_percentage",
+      "importance": 0.058092838073581524,
+      "rank": 10,
+      "measures": "Percentage of monitored feature cells with invalid, infinite, negative, or unexpected values.",
+      "model_rationale": "Invalid values can indicate changes in upstream data generation or quality.",
+      "risk_relation": "The synthetic label rule made higher invalid-value rates a risk signal; production evidence is still required."
+    },
+    {
+      "feature": "max_feature_drift_score",
+      "importance": 0.055086751338988355,
+      "rank": 11,
+      "measures": "The largest drift score among monitored features.",
+      "model_rationale": "A single feature can shift sharply even when aggregate drift remains moderate.",
+      "risk_relation": "A larger value can flag a concentrated input shift; importance does not establish a production relationship."
+    },
+    {
+      "feature": "historical_accuracy",
+      "importance": 0.05488418253542566,
+      "rank": 12,
+      "measures": "Latest genuine accuracy available before the monitoring observation.",
+      "model_rationale": "Past observed performance can provide context for subsequent performance risk.",
+      "risk_relation": "Historical association does not establish that accuracy changes cause future degradation."
+    },
+    {
+      "feature": "historical_recall",
+      "importance": 0.04724169863522146,
+      "rank": 13,
+      "measures": "Latest genuine positive-class recall available before the observation.",
+      "model_rationale": "Recall captures the model's recent ability to identify positive cases.",
+      "risk_relation": "Its use by the synthetic development model is not causal evidence."
+    },
+    {
+      "feature": "historical_precision",
+      "importance": 0.04588735737349806,
+      "rank": 14,
+      "measures": "Latest genuine positive-class precision available before the observation.",
+      "model_rationale": "Precision captures one aspect of recent model behavior.",
+      "risk_relation": "The development importance is not a production performance estimate."
+    },
+    {
+      "feature": "historical_performance_observations",
+      "importance": 0.03581830088143132,
+      "rank": 15,
+      "measures": "Number of prior performance observations available to monitoring.",
+      "model_rationale": "The count can represent how much historical evidence is available.",
+      "risk_relation": "The synthetic data's relationship is illustrative, not evidence about live operations."
+    },
+    {
+      "feature": "number_drifted_features",
+      "importance": 0.020701487734803004,
+      "rank": 16,
+      "measures": "Count of features exceeding configured drift thresholds.",
+      "model_rationale": "The number of affected features can provide context about the breadth of a distribution shift.",
+      "risk_relation": "The synthetic target may associate broad drift with risk, but that relationship is not validated on production outcomes."
+    },
+    {
+      "feature": "historical_metrics_available",
+      "importance": 0.0038556667207327454,
+      "rank": 17,
+      "measures": "Indicator that usable historical performance measurements are available.",
+      "model_rationale": "Availability can distinguish batches with performance context from those without it.",
+      "risk_relation": "This indicator can capture missingness patterns and does not imply degradation."
+    }
+  ],
+  "top_features": [
+    {
+      "feature": "historical_f1_score",
+      "importance": 0.11026953622915675,
+      "rank": 1,
+      "measures": "Latest genuine F1 score available before the monitoring observation.",
+      "model_rationale": "F1 summarizes recent precision and recall and was directly used in the synthetic target-generation process.",
+      "risk_relation": "Its prominence may reflect the synthetic label rule and must not be interpreted as measured production behavior."
+    },
+    {
+      "feature": "dataset_drift_score",
+      "importance": 0.10719165109511904,
+      "rank": 2,
+      "measures": "Aggregate distribution drift between reference and current input data.",
+      "model_rationale": "A broad shift in input distributions may signal that the model is operating on less familiar data.",
+      "risk_relation": "Synthetic labels were more likely as this score increased; this is a learned association in the development fixture."
+    },
+    {
+      "feature": "previous_f1_trend",
+      "importance": 0.08187401393202581,
+      "rank": 3,
+      "measures": "Recent trend in genuine F1 values known as of the observation.",
+      "model_rationale": "A declining historical trend can provide an early warning signal.",
+      "risk_relation": "The synthetic target rule explicitly used negative trend, so its importance partly reflects the constructed experiment."
+    },
+    {
+      "feature": "prediction_positive_rate_change",
+      "importance": 0.06702419594966406,
+      "rank": 4,
+      "measures": "Change in positive prediction rate relative to the preceding batch.",
+      "model_rationale": "A sudden change in prediction mix can highlight behavior changes worth investigating.",
+      "risk_relation": "This feature's importance represents predictive association in this trained synthetic model only."
+    },
+    {
+      "feature": "prediction_mean_probability",
+      "importance": 0.06643320519288226,
+      "rank": 5,
+      "measures": "Mean predicted probability across records in a batch.",
+      "model_rationale": "A shift in confidence distribution can accompany changes in inputs or predictions.",
+      "risk_relation": "It does not measure calibration or correctness by itself."
+    },
+    {
+      "feature": "data_quality_score",
+      "importance": 0.06576395336365086,
+      "rank": 6,
+      "measures": "A bounded score derived from missing and invalid value percentages.",
+      "model_rationale": "It summarizes data-quality signals in a single feature.",
+      "risk_relation": "Its importance may overlap with missingness and invalid-value features and should not be read as an independent effect."
+    },
+    {
+      "feature": "duplicate_rate",
+      "importance": 0.06084377616252834,
+      "rank": 7,
+      "measures": "Fraction of duplicate records in the monitored batch.",
+      "model_rationale": "Duplicate records can alter the effective input population and batch summaries.",
+      "risk_relation": "Any relationship shown here is specific to the synthetic development data."
+    },
+    {
+      "feature": "prediction_positive_rate",
+      "importance": 0.060801844914765084,
+      "rank": 8,
+      "measures": "Fraction of Model 1 predictions assigned to the positive class.",
+      "model_rationale": "A changed prediction mix can reflect changes in inputs or model behavior.",
+      "risk_relation": "It is a monitoring signal, not proof that the model's true performance has degraded."
+    },
+    {
+      "feature": "missing_value_percentage",
+      "importance": 0.05822953986652584,
+      "rank": 9,
+      "measures": "Percentage of monitored feature values that are missing.",
+      "model_rationale": "Missingness can affect the inputs and preprocessing behavior seen by Model 1.",
+      "risk_relation": "The synthetic label rule made higher missingness a risk signal; this is a designed association, not causation."
+    },
+    {
+      "feature": "invalid_value_percentage",
+      "importance": 0.058092838073581524,
+      "rank": 10,
+      "measures": "Percentage of monitored feature cells with invalid, infinite, negative, or unexpected values.",
+      "model_rationale": "Invalid values can indicate changes in upstream data generation or quality.",
+      "risk_relation": "The synthetic label rule made higher invalid-value rates a risk signal; production evidence is still required."
+    }
+  ],
+  "model_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\model2-development-random-forest-seed-42.joblib",
+  "chart_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\reports\\feature_importance_top10.png",
+  "explanation_report_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\reports\\feature_importance_explanations.md"
+}

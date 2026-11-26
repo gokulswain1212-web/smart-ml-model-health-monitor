@@ -1,0 +1,39 @@
+{
+  "model_scope": "HISTORICAL_OFFLINE",
+  "provenance": "HISTORICAL_OFFLINE",
+  "model_version": "model2-offline-random-forest-20261120T094139246750Z",
+  "evaluation_metrics": {
+    "accuracy": 0.3333333333333333,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "confusion_matrix": [
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "roc_auc": 0.4,
+    "test_class_counts": {
+      "0": 4,
+      "1": 5
+    }
+  },
+  "training_size": 31,
+  "testing_size": 9,
+  "temporal_split": {
+    "training_start": "2016-11-20T23:59:59",
+    "training_end": "2017-06-18T23:59:59",
+    "training_target_end": "2017-06-25T23:59:59",
+    "testing_start": "2017-07-02T23:59:59",
+    "testing_end": "2017-08-27T23:59:59"
+  },
+  "target_class_counts": {
+    "0": 24,
+    "1": 17
+  }
+}

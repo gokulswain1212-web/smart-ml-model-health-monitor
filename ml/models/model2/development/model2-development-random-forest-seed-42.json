@@ -1,0 +1,83 @@
+{
+  "model2_status": "DEVELOPMENT_TRAINED",
+  "data_provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "model_name": "Model 2 Synthetic Development Experiment",
+  "model_version": "model2-development-random-forest-seed-42",
+  "algorithm": "RandomForestClassifier",
+  "feature_names": [
+    "dataset_drift_score",
+    "max_feature_drift_score",
+    "number_drifted_features",
+    "missing_value_percentage",
+    "invalid_value_percentage",
+    "data_quality_score",
+    "duplicate_rate",
+    "prediction_positive_rate",
+    "prediction_positive_rate_change",
+    "prediction_mean_probability",
+    "historical_accuracy",
+    "historical_precision",
+    "historical_recall",
+    "historical_f1_score",
+    "previous_f1_trend",
+    "historical_metrics_available",
+    "historical_performance_observations"
+  ],
+  "target_name": "performance_degraded",
+  "synthetic_label_rule": "A reproducible Bernoulli label sampled from a logistic risk function of drift, missing/invalid percentages, negative prior F1 trend, and historical F1. This is a workflow fixture, not a production target.",
+  "random_state": 42,
+  "sample_count": 1000,
+  "dataset_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\synthetic_development_dataset_seed-42.csv",
+  "model_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\model2-development-random-forest-seed-42.joblib",
+  "metrics_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\model2\\development\\model2-development-random-forest-seed-42-metrics.json",
+  "evaluation_metrics": {
+    "data_provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+    "holdout_method": "stratified random holdout",
+    "test_fraction": 0.25,
+    "random_state": 42,
+    "train_size": 750,
+    "test_size": 250,
+    "accuracy": 0.728,
+    "precision": 0.5903614457831325,
+    "recall": 0.5903614457831325,
+    "f1_score": 0.5903614457831325,
+    "confusion_matrix": [
+      [
+        133,
+        34
+      ],
+      [
+        34,
+        49
+      ]
+    ],
+    "classification_report": {
+      "stable": {
+        "precision": 0.7964071856287425,
+        "recall": 0.7964071856287425,
+        "f1-score": 0.7964071856287425,
+        "support": 167.0
+      },
+      "degraded": {
+        "precision": 0.5903614457831325,
+        "recall": 0.5903614457831325,
+        "f1-score": 0.5903614457831325,
+        "support": 83.0
+      },
+      "accuracy": 0.728,
+      "macro avg": {
+        "precision": 0.6933843157059375,
+        "recall": 0.6933843157059375,
+        "f1-score": 0.6933843157059375,
+        "support": 250.0
+      },
+      "weighted avg": {
+        "precision": 0.728,
+        "recall": 0.728,
+        "f1-score": 0.728,
+        "support": 250.0
+      }
+    }
+  },
+  "promotion_policy": "Never automatically promote development artifacts."
+}

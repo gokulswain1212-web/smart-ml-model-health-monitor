@@ -1,0 +1,38 @@
+{
+  "model2_status": "NOT_TRAINED",
+  "reason": "Need at least 20 labeled real observations; found 0.",
+  "historical_dataset": {
+    "observation_count": 3,
+    "genuine_labeled_observation_count": 0,
+    "unlabeled_observation_count": 3,
+    "target_class_counts": {},
+    "data_source_counts": {
+      "synthetic_test": 3
+    },
+    "feature_names": [
+      "dataset_drift_score",
+      "max_feature_drift_score",
+      "number_drifted_features",
+      "missing_value_percentage",
+      "invalid_value_percentage",
+      "data_quality_score",
+      "duplicate_rate",
+      "prediction_positive_rate",
+      "prediction_positive_rate_change",
+      "prediction_mean_probability",
+      "historical_accuracy",
+      "historical_precision",
+      "historical_recall",
+      "historical_f1_score",
+      "previous_f1_trend",
+      "historical_metrics_available",
+      "historical_performance_observations"
+    ],
+    "target_name": "performance_degraded"
+  },
+  "training_size": 0,
+  "testing_size": 0,
+  "model_path": null,
+  "metadata_path": null,
+  "dataset_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\data\\monitoring\\model2\\historical_monitoring_dataset_20261030T134944744731Z.csv"
+}

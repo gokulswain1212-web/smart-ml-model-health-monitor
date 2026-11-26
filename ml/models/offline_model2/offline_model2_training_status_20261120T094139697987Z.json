@@ -1,0 +1,40 @@
+{
+  "model2_status": "TRAINED",
+  "model_scope": "HISTORICAL_OFFLINE",
+  "provenance": "HISTORICAL_OFFLINE",
+  "reason": null,
+  "eligible_observation_count": 41,
+  "target_class_counts": {
+    "0": 24,
+    "1": 17
+  },
+  "training_size": 31,
+  "testing_size": 9,
+  "model_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\model2-offline-random-forest-20261120T094139246750Z.joblib",
+  "metadata_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\model2-offline-random-forest-20261120T094139246750Z.json",
+  "dataset_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\historical_offline_monitoring_dataset.csv",
+  "evaluation_report_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\evaluation_report_model2-offline-random-forest-20261120T094139246750Z.json",
+  "evaluation_metrics": {
+    "accuracy": 0.3333333333333333,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "confusion_matrix": [
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "roc_auc": 0.4,
+    "test_class_counts": {
+      "0": 4,
+      "1": 5
+    }
+  },
+  "model_version": "model2-offline-random-forest-20261120T094139246750Z",
+  "training_timestamp": "2026-11-20T09:41:39.246715+00:00"
+}

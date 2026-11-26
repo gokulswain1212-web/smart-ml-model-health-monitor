@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and generated output
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Local monitoring records, uploaded batches, reports, and outcomes
+data/monitoring/*
+!data/monitoring/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Source datasets and trained binary artifacts are supplied locally
+data/raw/*.csv
+ml/data/raw/*.csv
+ml/models/*.pkl
+ml/models/*.joblib
+ml/models/model2/development/*.joblib
+ml/models/model2/development/*.csv

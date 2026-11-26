@@ -1,0 +1,7 @@
+batch_id,monitoring_timestamp,actual_performance_degraded,predicted_performance_degraded,degradation_probability,data_source_type,source,environment,is_synthetic
+simulation-20261125T172052Z-055e585c-batch-019,2026-05-11 00:00:00+00:00,1,1,0.655,synthetic,synthetic_simulator,development,True
+simulation-20261125T172052Z-055e585c-batch-020,2026-05-18 00:00:00+00:00,0,1,0.56,synthetic,synthetic_simulator,development,True
+simulation-20261125T172052Z-055e585c-batch-021,2026-05-25 00:00:00+00:00,1,1,0.635,synthetic,synthetic_simulator,development,True
+simulation-20261125T172052Z-055e585c-batch-022,2026-06-01 00:00:00+00:00,0,0,0.475,synthetic,synthetic_simulator,development,True
+simulation-20261125T172052Z-055e585c-batch-023,2026-06-08 00:00:00+00:00,1,1,0.665,synthetic,synthetic_simulator,development,True
+simulation-20261125T172052Z-055e585c-batch-024,2026-06-15 00:00:00+00:00,0,0,0.44,synthetic,synthetic_simulator,development,True

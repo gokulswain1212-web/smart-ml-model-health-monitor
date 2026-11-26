@@ -1,0 +1,195 @@
+{
+  "model_name": "Hotel Booking Cancellation Prediction Model 1",
+  "algorithm": "RandomForestClassifier",
+  "training_date": "2026-10-30T12:57:32.313362+00:00",
+  "dataset_name": "cleane_hotel.csv",
+  "dataset_path": "data\\processed\\cleane_hotel.csv",
+  "target_column": "is_canceled",
+  "feature_names": [
+    "hotel",
+    "lead_time",
+    "arrival_date_year",
+    "arrival_date_month",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "reserved_room_type",
+    "assigned_room_type",
+    "booking_changes",
+    "deposit_type",
+    "agent",
+    "days_in_waiting_list",
+    "customer_type",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests"
+  ],
+  "numerical_features": [
+    "lead_time",
+    "arrival_date_year",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "booking_changes",
+    "agent",
+    "days_in_waiting_list",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests"
+  ],
+  "categorical_features": [
+    "hotel",
+    "arrival_date_month",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type",
+    "assigned_room_type",
+    "deposit_type",
+    "customer_type"
+  ],
+  "preprocessing": {
+    "source_notebooks": [
+      "ml/notebooks/01_check_dataset.ipynb",
+      "ml/notebooks/02_train_model_1.ipynb"
+    ],
+    "dataset_preparation": [
+      "Dropped company because more than 60% of its values were missing.",
+      "Filled missing categorical values with their mode.",
+      "Clipped numeric outliers using the 1.5*IQR bounds."
+    ],
+    "training_notebook": [
+      "Filled missing children with the dataset median.",
+      "Filled missing agent with 0.",
+      "Mapped hotel, arrival_date_month, and meal using the notebook's mappings.",
+      "Fitted OrdinalEncoder on remaining object/string columns after those mappings.",
+      "Dropped reservation_status, reservation_status_date, and derived date fields from X.",
+      "No scaling was applied."
+    ],
+    "ordinal_encoder_columns": [
+      "hotel",
+      "arrival_date_month",
+      "meal",
+      "country",
+      "market_segment",
+      "distribution_channel",
+      "reserved_room_type",
+      "assigned_room_type",
+      "deposit_type",
+      "customer_type"
+    ],
+    "categorical_fill_values": {
+      "country": "PRT"
+    }
+  },
+  "training_configuration": {
+    "estimator_parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "train_test_split": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "stratify": null,
+      "train_rows": 95512,
+      "test_rows": 23878
+    }
+  },
+  "evaluation_metrics": {
+    "accuracy": 0.8892704581623252,
+    "confusion_matrix": [
+      [
+        13939,
+        968
+      ],
+      [
+        1676,
+        7295
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.892667307076529,
+        "recall": 0.9350640638626149,
+        "f1-score": 0.9133739597667256,
+        "support": 14907.0
+      },
+      "1": {
+        "precision": 0.8828512646738472,
+        "recall": 0.8131757886523242,
+        "f1-score": 0.8465823372403388,
+        "support": 8971.0
+      },
+      "accuracy": 0.8892704581623252,
+      "macro avg": {
+        "precision": 0.8877592858751882,
+        "recall": 0.8741199262574695,
+        "f1-score": 0.8799781485035323,
+        "support": 23878.0
+      },
+      "weighted avg": {
+        "precision": 0.888979405393203,
+        "recall": 0.8892704581623252,
+        "f1-score": 0.8882802481625622,
+        "support": 23878.0
+      }
+    }
+  },
+  "environment": {
+    "python_version": "3.13.7",
+    "scikit_learn_version": "1.9.1",
+    "pandas_version": "3.0.5",
+    "joblib_version": "1.6.0"
+  },
+  "verification": {
+    "raw_preprocessing_matches_training_features": true,
+    "pipeline_predictions_match_fitted_model": true,
+    "prediction_sample_count": 8,
+    "sample_predictions": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  }
+}

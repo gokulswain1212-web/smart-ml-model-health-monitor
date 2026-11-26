@@ -1,0 +1,68 @@
+{
+  "data_provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "data_source_type": "synthetic",
+  "source": "synthetic_simulator",
+  "environment": "development",
+  "is_synthetic": true,
+  "evaluation_metrics": {
+    "data_provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+    "holdout_method": "chronological holdout",
+    "test_fraction": 0.25,
+    "random_state": 42,
+    "train_size": 18,
+    "test_size": 6,
+    "train_start_timestamp": "2026-01-05T00:00:00+00:00",
+    "train_end_timestamp": "2026-05-04T00:00:00+00:00",
+    "test_start_timestamp": "2026-05-11T00:00:00+00:00",
+    "test_end_timestamp": "2026-06-15T00:00:00+00:00",
+    "training_class_counts": {
+      "0": 11,
+      "1": 7
+    },
+    "testing_class_counts": {
+      "0": 3,
+      "1": 3
+    },
+    "accuracy": 0.8333333333333334,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1_score": 0.8571428571428571,
+    "confusion_matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "classification_report": {
+      "stable": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.8,
+        "support": 3.0
+      },
+      "degraded": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1-score": 0.8571428571428571,
+        "support": 3.0
+      },
+      "accuracy": 0.8333333333333334,
+      "macro avg": {
+        "precision": 0.875,
+        "recall": 0.8333333333333333,
+        "f1-score": 0.8285714285714285,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.875,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8285714285714286,
+        "support": 6.0
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "model2_status": "TRAINED",
+  "model_scope": "HISTORICAL_OFFLINE",
+  "provenance": "HISTORICAL_OFFLINE",
+  "model1_replay_version": "historical-refit-87bf685e4dd39ad8",
+  "reason": null,
+  "eligible_observation_count": 41,
+  "target_class_counts": {
+    "0": 24,
+    "1": 17
+  },
+  "training_size": 31,
+  "testing_size": 9,
+  "model_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\model2-offline-random-forest-20261120T104834452589Z.joblib",
+  "metadata_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\model2-offline-random-forest-20261120T104834452589Z.json",
+  "dataset_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\historical_offline_monitoring_dataset_historical-refit-87bf685e4dd39ad8.csv",
+  "evaluation_report_path": "C:\\Users\\LENOVO\\Desktop\\Smart ML Model Health Monitor\\ml\\models\\offline_model2\\evaluation_report_model2-offline-random-forest-20261120T104834452589Z.json",
+  "evaluation_metrics": {
+    "accuracy": 0.3333333333333333,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "confusion_matrix": [
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "roc_auc": 0.4,
+    "test_class_counts": {
+      "0": 4,
+      "1": 5
+    }
+  },
+  "model_version": "model2-offline-random-forest-20261120T104834452589Z",
+  "training_timestamp": "2026-11-20T10:48:34.452575+00:00"
+}

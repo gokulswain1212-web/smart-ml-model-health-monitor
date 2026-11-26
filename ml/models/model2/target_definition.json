@@ -1,0 +1,19 @@
+{
+  "target": "performance_degraded",
+  "stable_value": 0,
+  "degraded_value": 1,
+  "rule": "For a trusted production monitoring observation, compare the latest genuine F1 score available at its monitoring timestamp with the first genuine F1 score recorded afterward, within the configured future window. Label 1 when the absolute F1 decline is at least the configured threshold; otherwise label 0.",
+  "f1_absolute_drop_threshold": 0.05,
+  "future_window_days": 30,
+  "required_observations": [
+    "A monitoring report from the token-authenticated production ingestion at the prediction timestamp.",
+    "A genuine actual-outcome performance evaluation at or before that timestamp.",
+    "A later genuine actual-outcome performance evaluation within the future window."
+  ],
+  "leakage_controls": [
+    "Monitoring features are computed only from records timestamped at or before the monitoring observation.",
+    "Future F1 is used only to create the target and is never included in the feature list.",
+    "Only token-authenticated production-source observations are eligible for training labels.",
+    "Synthetic, operator-declared-only, or unverified sources are not assigned training labels."
+  ]
+}
